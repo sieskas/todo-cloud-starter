@@ -1,4 +1,4 @@
-// BUILD PHASE
+# -- BUILD PHASE --
 FROM node:20.10.0 as builder
 
 WORKDIR /usr/src/app
@@ -9,7 +9,7 @@ COPY . .
 
 RUN npm run build
 
-// PROD RUN PHASE
+# -- PROD RUN PHASE --
 FROM node:20.10.0-alpine
 
 EXPOSE 8080
