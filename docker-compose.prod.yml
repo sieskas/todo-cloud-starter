@@ -47,7 +47,8 @@ services:
 
   todo-view:
     build:
-      dockerfile: ./todo-react-view/Dockerfile.prod
+      context: ./todo-react-view
+      dockerfile: Dockerfile.prod
     image: sieskasz/todo-view:1.0
     ports:
       - "4201:8080"
