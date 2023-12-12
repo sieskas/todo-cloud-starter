@@ -17,10 +17,11 @@ EXPOSE 8080
 COPY --from=builder /usr/src/app/dist /usr/share/nginx/html
 COPY ./nginx-custom.conf /etc/nginx/conf.d/default.conf
 
-# RUN addgroup www-data && adduser -S -D -g "" www-data www-data --exists
+# -- exits dont need to be set, as the user is already created by the base image --
+# RUN addgroup www-data && adduser -S -D -g "" www-data www-data
 
-RUN touch /var/run/nginx.pid && \
-    chown -R www-data:www-data /var/run/nginx.pid && \
-    chown -R www-data:www-data /var/cache/nginx
+# RUN touch /var/run/nginx.pid && \
+#     chown -R www-data:www-data /var/run/nginx.pid && \
+#     chown -R www-data:www-data /var/cache/nginx
 
-USER www-data
+# USER www-data
