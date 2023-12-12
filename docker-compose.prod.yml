@@ -6,6 +6,7 @@ services:
     build:
       dockerfile: ../Dockerfile.nodejs.prod
     image: sieskasz/todo-cache-ingestion:1.0
+    command: sh /home/node/app/start.sh
 
   todo-cache-service:
     build:
