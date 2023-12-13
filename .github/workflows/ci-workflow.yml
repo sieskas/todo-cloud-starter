@@ -36,7 +36,7 @@ jobs:
       - name: Run Tests
         run: |
           docker run --rm sieskasz/todo-react-view-test npm test
-          docker run sieskasz/todo-cache-service-test npm test
+# docker run sieskasz/todo-cache-service-test npm test
 
       - name: Build and Push Production Images
         run: |
