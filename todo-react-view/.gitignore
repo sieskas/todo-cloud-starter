@@ -23,6 +23,7 @@ dist-ssr
 
 # Others
 .DS_Store
+coverage
 
 # Vite
 .vite
