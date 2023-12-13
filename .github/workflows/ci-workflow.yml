@@ -30,12 +30,11 @@ jobs:
 
       - name: Build Docker Images
         run: |
-          docker build ./todo-view -f ./todo-view/Dockerfile.dev -t sieskasz/todo-view-test
+          docker build ./todo-react-view -f ./todo-react-view/Dockerfile.dev -t  
           docker build ./todo-cache-service -f Dockerfile.nodejs.dev -t sieskasz/todo-cache-service-test
 
       - name: Run Tests
         run: |
-          docker run sieskasz/todo-view-test npm test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
           docker run sieskasz/todo-cache-service-test npm test
 
       - name: Build and Push Production Images
