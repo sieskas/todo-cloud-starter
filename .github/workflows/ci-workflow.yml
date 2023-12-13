@@ -30,7 +30,7 @@ jobs:
 
       - name: Build Docker Images
         run: |
-          docker build ./todo-react-view -f ./todo-react-view/Dockerfile.dev -t  
+          docker build ./todo-react-view -f ./todo-react-view/Dockerfile.dev
           docker build ./todo-cache-service -f Dockerfile.nodejs.dev -t sieskasz/todo-cache-service-test
 
       - name: Run Tests
